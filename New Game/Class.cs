@@ -51,6 +51,7 @@ namespace Classes {
         public int Strength;
         public int Agility;
         public int Intelligence;
+        public List<string> Traits = new List<string>();
 
     }
     public class ClassChooser
