@@ -43,10 +43,13 @@ M: Mage
 R: Rogue
 Choose Wisely
 ");
+                
                 ClassChooser.ChooseClass(Class);
                 Console.WriteLine("Please give yourself a name I recommend Midas its a good name.");
+                Console.WriteLine();
                 Class.Name = Console.ReadLine() + " the " + Class.Class;
-                Stats.DrawStats(Class);
+                Console.Clear();
+                CharacterIntroduction.Choices(Class);
             }
             else
             {
