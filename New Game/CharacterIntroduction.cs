@@ -9,9 +9,9 @@ public class CharacterIntroduction
 	{
 
 		Console.WriteLine(@"Welcome to the world of Atharia, a world of fantasy awaits. Goblins and monsters run rampant across this Realm.
-Civilized races such as Humans, Elves and Dwarves fight and squabble amongst eachother. Whilst dragons sleep on their hoards.
+Civilized races such as Humans, Elves and Dwarves fight and squabble amongst each other. Whilst dragons sleep on their hoards.
 
-You are a " + Class.Class + @". Every story has a beggining, we will now establish yours. What was your childhood like?
+You are a " + Class.Class + @". Every story has a beginning, we will now establish yours. What was your childhood like?
 U: You were an urchin.
 N: Raised as nobility.
 F: Child of farmers.
@@ -23,7 +23,7 @@ A: Abusive household.");
 			Console.WriteLine(@"
 You were an Urchin, as such life wasn't easy. 
 You don't quite remember how you got yourself onto the streets, did you run away? Were you abandoned?
-One thing you do remember is that you have had to fight for every scrap, the ocasionally territorial dispute amongst other urchins or theft targeting the local merchants.
+One thing you do remember is that you have had to fight for every scrap, the occasionally territorial dispute amongst other urchins or theft targeting the local merchants.
 This has made you agile in your youth, and you know how to take a punch.");
 			Class.Traits.Add("Urchin");
 		}
@@ -39,7 +39,7 @@ This has made you stronger than most kids, and the study of martial history cert
 		else if (key.Key == ConsoleKey.F)
 		{
 			Console.WriteLine(@"
-Humble beginings. A completely unremarabkle upbringing, born to a family of farmers.
+Humble beginnings. A completely unremarkable upbringing, born to a family of farmers.
 But just like the farmer is a backbone of society, a life on a farm has given you the backbone of a Hero.
 Toiling the fields has given you a physique that is hard to beat. And though your family may not be wealthy they were not poor either.
 They have left you a single heirloom, a magic ring left to you by your father a trophy from his conscripted service to the local lord.");
@@ -82,7 +82,7 @@ Despite your noble blood you were still conscripted into the army, wether by cho
 Armies still need leaders, and with your education and noble status you were swiftly elevated to an officer in the army.
 Your martial education helped you conduct battle plans, and even assist in drawing them up.
 As an officer you were at the heart of battle with your men, you have seen plenty of death and despair, dealing your fair share of it yourself.
-Reaching adulthood you have the markings of a true battlehardened " + Class.Class + ".");
+Reaching adulthood you have the markings of a true battle-hardened " + Class.Class + ".");
 				Class.Traits.Add("ArmyOfficer");
 			}
 			else if (key.Key == ConsoleKey.N)
@@ -91,7 +91,7 @@ Reaching adulthood you have the markings of a true battlehardened " + Class.Clas
 You continued your pampered noble life, seeing very little reason to trade out your comforts for cheap thrills.
 Completing your studies as a noble, broadening your studies into economic management. Knowing how to wring every gold coin you are owed by the peasants your parents ruled over.
 With a noble education you have become quite wise, you have become exceptionally intelligent and wealthy, however your comfortable lifestyle has left your physical traits something to be desired.
-You may not be a battle hardened " + Class.Class + "but you have a keen mind to make up for it.");
+You may not be a battle hardened " + Class.Class + " but you have a keen mind to make up for it.");
 				Class.Traits.Add("PamperedNoble");
 			}
 			else if (key.Key == ConsoleKey.A)
@@ -111,7 +111,7 @@ The monster hunter has a mixed reputation, typically the lower rungs are conside
 But fortune shines upon you, as you are of noble blood. You joined the 'Cat' rank of hunter. Typically associated with the nobles and skilled hunters.
 Few people outrank you in the guild, but there is still plenty of ladder to climb. Perhaps one day you could achieve the coveted rank of 'Dragon' by slaying one?
 Joining the guild has given you a great understanding of alchemy and monsters and how to slay them, plenty of physical trials have been passed to get where you are.
-Intelligent, Agile and Strong. These are things that describe you now, though you don't excell at any you have struck a fine balance required to hunt monsters.
+Intelligent, Agile and Strong. These are things that describe you now, though you don't excel at any you have struck a fine balance required to hunt monsters.
 ");
 				Class.Traits.Add("CatMonsterHunter");
 			}
@@ -124,8 +124,8 @@ You have gained more experience of the world that a textbook ever could.
 Though your travels have left your personal funds tight by a noble's standards, you have become more skilled in all aspects.
 ");
 				Class.Traits.Add("NobleWanderer");
-					
-					}
+
+            }
 			else { Console.Clear();
 				SecondChoice(Class);
 			}
@@ -146,11 +146,18 @@ W: Became a Wanderer.
 Reaching adulthood, you were still prowling the streets to survive. You had become quite skilled at it, however one day it all changed.
 The military came through your town, pulling all the dregs of society they could find off the streets into the army.
 They shoved a spear into your hand and ordered you to march, despite the forceful nature of your recruitment at least you were fed daily.
-Despite starting out with very little in the army, you nevertheless managed to survive the harsh enviroment despite being under equipped.
+Despite starting out with very little in the army, you nevertheless managed to survive the harsh environment despite being under equipped.
 Eventually you were even granted some of the spoil of war, slowly building up an arsenal.
 You are now stronger than ever, and even decently equipped for battle.
 ");
-				Class.Traits.Add("WarriorUrchin");
+				Class.Traits.Add("SoldierUrchin");
+			}
+			else if(key.Key == ConsoleKey.A)
+			{
+				Console.WriteLine(@"
+Your life changed forever when a wizard came through town. Either intentionally or out of pity he pulled you off the streets to enlist into the academy.
+As a person of no means, you were looked down upon in the academy. 
+");
 			}
 		};
 	}
