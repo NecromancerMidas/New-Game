@@ -7,7 +7,7 @@ using System;
 using System.Data;
 using Classes;
 
-namespace Rpg
+namespace New_Game
 {
 
     class MainGame
@@ -36,19 +36,21 @@ Please press your Enter key to start");
             ConsoleKeyInfo ifEnter = Console.ReadKey(true);
             if (ifEnter.Key == ConsoleKey.Enter)
             {
-                Console.WriteLine(@"
+                string classChoice = @"
 Please choose a class. Your options 
 W: Warrior
 M: Mage
 R: Rogue
 Choose Wisely
-");
-                
+";
+
+                Draw.Box(classChoice);
                 ClassChooser.ChooseClass(Class);
                 Console.WriteLine("Please give yourself a name I recommend Midas its a good name.");
                 Console.WriteLine();
                 Class.Name = Console.ReadLine() + " the " + Class.Class;
-                Console.Clear();
+                Console.WriteLine(Stats.DrawStats(Class));
+                Draw.Box(Stats.DrawStats(Class));
                 CharacterIntroduction.Choices(Class);
             }
             else
