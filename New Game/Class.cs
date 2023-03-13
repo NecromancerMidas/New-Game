@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Security;
 using System.Security.Claims;
 
 
@@ -9,6 +10,7 @@ namespace Classes {
     
     {
         public int Level = 1;
+        public int Exp = 0;
         public string Class = "Warrior";
         public int Health = 2000;
         public int Mana = 250;
@@ -108,16 +110,18 @@ namespace Classes {
 
     }
       public class Stats {
-      public static void DrawStats(CurrentClass Class) {
-            Console.WriteLine(@"Name: " + Class.Name + @"
-Level: " + Class.Level + @"
-Health: " + Class.Health + @"
-Mana: " + Class.Mana + @"
-Strength:" + Class.Strength + @"
-Agility: " + Class.Agility + @"
-Intelligence: " + Class.Intelligence);
+      public static string DrawStats(CurrentClass Class) {
+            string stats = $@"
+Name: {Class.Name}
+Level: {Class.Level} 
+Health: {Class.Health} 
+Mana:  {Class.Mana} 
+Strength: {Class.Strength} 
+Agility:  {Class.Agility}
+Intelligence: {Class.Intelligence}
+";
 
-
-        }
+            return stats;
+      }
     }
 }
