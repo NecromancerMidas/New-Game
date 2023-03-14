@@ -2,7 +2,6 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Xml;
-using Classes;
 
 public class Draw
 {
@@ -15,18 +14,15 @@ public class Draw
         string vertical = "║";
         string horizontal = "═";
         string width = null;
-        string top = null;
-        string bottom = null;
+        string top;
+        string bottom;
         string left = vertical + " ";
         string result = String.Empty;
-        string Result = "";
-        string Right = vertical;
+        string Result;
         string newline;
 
         string[] lines = convert.Split('\u000A');
         int longest = 0;
-        int firstcycle = 0;
-        int firstcycle2 = 0;
         foreach (string line in lines)
         {
 
