@@ -2,16 +2,16 @@
 using System.Net.Security;
 using System.Security.Claims;
 
-// SE på arv til og forbedre kode her.
+// SE på arv til og forbedre kode her. Nice job :) :) :)
 namespace New_Game.Classes
 {
-
+    //Maybe rename? Draws up stats of chosen class when called.
     public class Stats
     {
         public static string DrawStats(BaseCharacter Class)
         {
             string stats = $@"
-Name: {Class.Name}
+Name: {Class.DisplayName}
 Level: {Class.Level} 
 Health: {Class.Health} 
 Mana:  {Class.Mana} 

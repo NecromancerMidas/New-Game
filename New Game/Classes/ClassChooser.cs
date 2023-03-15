@@ -5,11 +5,11 @@ using System.Security.Claims;
 namespace New_Game.Classes
 {
 
-
-    class ClassChooser
+    /*Chooses a class based on user input, recurs on failure. Returns and assigns class template */
+    static class ClassChooser
     {
         
-        public static object ChooseClass()
+        public static BaseCharacter ChooseClass()
         {
             
             ConsoleKeyInfo Class = Console.ReadKey(true);

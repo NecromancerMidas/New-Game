@@ -1,82 +1,49 @@
 ﻿using New_Game.Classes;
 using System;
 using System.Dynamic;
+using System.Runtime.CompilerServices;
 using System.Security.Claims;
 
 namespace New_Game.Classes
 {
 
-
+    /*Template for a character, gets built on further with more detail*/
     public class BaseCharacter
     {
-        protected string name;
-        protected string @class;
-        protected int xp = 0;
-        protected int level = 1;
-        protected int health;
-        protected int mana;
-        protected int strength;
-        protected int agility;
-        protected int intelligence;
-        protected List<string> traits = new List<string>();
-        public int Xp
-        {
-            get => xp;
-            set => xp = value;
-        }
+        public string DisplayName { get; protected set; }
+        public string Name { get; protected set; }
+        public string Class { get; protected set; }
+        public int Xp { get; protected set; }
+        public int Level { get; protected set; }
+        public int Health { get; protected set; }
+        public int Mana { get; protected set; }
+        public int Strength { get; protected set; }
+        public int Agility { get; protected set; }
+        public int Intelligence { get; protected set; }
+        public List<string> Traits { get; protected set; }
 
-        public int Level
+        public BaseCharacter()
         {
-            get => level;
-            set => level = value;
+            Xp = 0;
+            Level = 1;
+            Traits = new List<string>();
         }
-
-        public int Health
+        public void ClassStringChanger(string value,string field)
         {
-            get => health;
-            set => health = value;
+            if (field == "name")
+            {
+                Name = value;
+                
+            }
+            else if (field == "displayName")
+            {
+                DisplayName = Name + " the " + value;
+            }
         }
-
-        public int Mana
-        {
-            get => mana;
-            set => mana = value;
-        }
-
-        public int Strength
-        {
-            get => strength;
-            set => strength = value;
-        }
-
-        public int Agility
-        {
-            get => agility;
-            set => agility = value;
-        }
-
-        public int Intelligence
-        {
-            get => intelligence;
-            set => intelligence = value;
-        }
-
-        public string Name
-        {
-            get { return name; }
-            set {name = value;}
-        }
-
-        public string Class
-        {
-            get { return @class; } 
-            set { @class = value;}
-        }
-        public List<string> Traits { get { return traits; }}
     }
-    
 
     }
+
 
 /*public BaseCharacter(string @class, int health, int mana, int strength, int agility, int intelligence)
 {

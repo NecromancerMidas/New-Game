@@ -2,7 +2,7 @@
 
 namespace New_Game.Classes
 {
-
+    /*Warrior Class Template*/
     public class WarriorClass : BaseCharacter
     {
        

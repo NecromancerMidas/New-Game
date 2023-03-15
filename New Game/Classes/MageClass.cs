@@ -4,10 +4,10 @@ using New_Game.Classes;
 namespace New_Game.Classes
 {
 
-
+    /*Mage Class Template*/
     public class MageClass : BaseCharacter
     {
-        public MageClass()
+        public MageClass() 
         {
             Class = "Mage";
             Health = 1000; 

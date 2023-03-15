@@ -2,7 +2,7 @@
 
 namespace New_Game.Classes
 {
-
+     /*Rogue Class template*/
     public class RogueClass : BaseCharacter
     {
         public RogueClass()
