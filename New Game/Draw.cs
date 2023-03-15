@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Xml;
 
+// I hate my life.
 public class Draw
 {
     public static void Box(string convert)
@@ -63,7 +64,7 @@ public class Draw
 
             result += left + newline + padding + vertical + "\n";
         }
-
+        // don't touch it works
         Result = top + "\n" + result + bottom;
         
         Console.WriteLine(@"

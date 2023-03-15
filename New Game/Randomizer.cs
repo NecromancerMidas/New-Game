@@ -1,5 +1,5 @@
 ﻿using System;
-
+//Does what it says on the tin, nothing more nothing less.
 public class Randomer
 {
 	public static int Randomizer(int min, int max)
