@@ -6,14 +6,15 @@
 using System;
 using System.Data;
 using New_Game.Classes;
+using New_Game.Introduction;
 
 namespace New_Game
 {
-
+    // its the main program, pretty neat huh?
     class MainGame
     {
 
-
+        
         static void Main()
         {
             Console.SetWindowSize(200, 40);
@@ -38,7 +39,7 @@ $$/      $$/ $$/  $$$$$$$/  $$$$$$$/ $$$$$$$/  $$$$$$$/        $$/   $$/  $$$$$$
 ";
             Draw.Box(intro);
 
-            Console.WriteLine(@"
+            Console.WriteLine($@"
 Welcome to Midas's Adventure, a small rpg game I created for fun. 
 Please press your Enter key to start");
             ConsoleKeyInfo ifEnter = Console.ReadKey(true);
@@ -54,11 +55,15 @@ Choose Wisely
 
                 Draw.Box(classChoice);
                 
-               var Class = (BaseCharacter)ClassChooser.ChooseClass();
+               //var Class = (BaseCharacter)ClassChooser.ChooseClass();
+               //var classChooser = new ClassChooser();
+              var Class = ClassChooser.ChooseClass();
 
-                Console.WriteLine("Please give yourself a name I recommend Midas its a good name.");
+
+              Console.WriteLine("Please give yourself a name I recommend Midas its a good name.");
                 Console.WriteLine();
-                Class.Name = Console.ReadLine() + " the " + Class.Class;
+                Class.ClassStringChanger(Console.ReadLine(),"name");
+                Class.ClassStringChanger(Class.Class, "displayName");
                 Console.WriteLine(Stats.DrawStats(Class));
                 Draw.Box(Stats.DrawStats(Class));
                 CharacterIntroduction.Choices(Class);
