@@ -8,10 +8,10 @@ namespace New_Game.Items.CommonFiles
 {
     public class WeaponsStrengthCalc
     {
-        public static void Calc(int level, string rarity)
+        public static int Calc(int level)
         {
 
-
+            return level * Randomer.Randomizer(1, 4);
         }
 
 

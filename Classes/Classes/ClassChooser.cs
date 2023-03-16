@@ -6,7 +6,7 @@ namespace New_Game.Classes
 {
 
     /*Chooses a class based on user input, recurs on failure. Returns and assigns class template */
-    static class ClassChooser
+    public static class ClassChooser
     {
         
         public static BaseCharacter ChooseClass()

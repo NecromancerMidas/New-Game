@@ -5,8 +5,11 @@
 
 using System;
 using System.Data;
+using System.Runtime.CompilerServices;
 using New_Game.Classes;
 using New_Game.Introduction;
+using New_Game.Items.CommonFiles;
+using New_Game.Items.CommonItems.Swords;
 
 namespace New_Game
 {
@@ -58,13 +61,12 @@ Choose Wisely
                //var Class = (BaseCharacter)ClassChooser.ChooseClass();
                //var classChooser = new ClassChooser();
               var Class = ClassChooser.ChooseClass();
-
-
+              var Sword = new CommonSwords(Class.Level);
+              Draw.Box(DrawWeaponStats.DrawStats(Sword));
               Console.WriteLine("Please give yourself a name I recommend Midas its a good name.");
                 Console.WriteLine();
                 Class.ClassStringChanger(Console.ReadLine(),"name");
                 Class.ClassStringChanger(Class.Class, "displayName");
-                Console.WriteLine(Stats.DrawStats(Class));
                 Draw.Box(Stats.DrawStats(Class));
                 CharacterIntroduction.Choices(Class);
             }

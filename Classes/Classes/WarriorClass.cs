@@ -15,11 +15,6 @@ namespace New_Game.Classes
             Strength = 40;
             Agility = 15;
             Intelligence = 10;
-
-
-
-
-
         }
 
     }
