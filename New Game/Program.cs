@@ -6,6 +6,7 @@
 using System;
 using System.Data;
 using System.Runtime.CompilerServices;
+using Common;
 using New_Game.Classes;
 using New_Game.Introduction;
 using New_Game.Items.CommonFiles;
@@ -18,7 +19,7 @@ namespace New_Game
     {
 
         
-        static void Main()
+        public static void Main()
         {
             Console.SetWindowSize(200, 40);
             Console.Title = "Midas's Adventure";

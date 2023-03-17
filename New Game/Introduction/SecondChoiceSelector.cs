@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using Common;
 using New_Game.Classes;
 
 namespace New_Game.Introduction
