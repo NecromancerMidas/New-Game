@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Common;
 
-namespace New_Game.Items.CommonItems.Daggers
+namespace Items.Items.CommonItems.CommonWeapons.Daggers
 {
     public class DaggerNames
     {
@@ -14,11 +14,11 @@ namespace New_Game.Items.CommonItems.Daggers
 
         public static string CommonName()
         {
-            string Name = CommonDaggerNames[Randomer.Randomizer(0,CommonDaggerNames.Length)];
-          return Name;
+            string Name = CommonDaggerNames[Randomer.Randomizer(0, CommonDaggerNames.Length)];
+            return Name;
         }
 
 
     }
-    
+
 }

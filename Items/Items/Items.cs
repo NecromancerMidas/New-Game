@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 
 namespace New_Game.Items
 {
@@ -17,14 +18,43 @@ namespace New_Game.Items
         public int Agility { get; protected set; }
         public int Intelligence { get; protected set; }
 
+        public int Armor { get; protected set; }
+
+        public static int ItemLevelCalc(int level, string rarity)
+        {
+            if (rarity == "Common")
+            {
+                return level * Randomer.Randomizer(5, 8);
+            }
+            else if (rarity == "Rare")
+            {
+                return level * Randomer.Randomizer(8, 10);
+            }
+            else if (rarity == "Epic")
+            {
+                return level * Randomer.Randomizer(10, 12);
+            }
+            else if (rarity == "Legendary")
+            {
+                return level * Randomer.Randomizer(12, 15);
+            }
+
+            return 0;
+        }
+
+        public static int WeaponStrengthCalc(int level)
+        {
+
+            return level * Randomer.Randomizer(1, 4);
+        }
+
         public Items()
         {
 
 
         
     }
-
-}
+    }
 }
 
 

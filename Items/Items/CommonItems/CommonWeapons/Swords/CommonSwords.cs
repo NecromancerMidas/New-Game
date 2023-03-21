@@ -5,10 +5,11 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using New_Game.Items.CommonFiles;
+using New_Game.Items.CommonItems.Swords;
 
-namespace New_Game.Items.CommonItems.Swords
+namespace Items.Items.CommonItems.CommonWeapons.Swords
 {
-    public class CommonSwords : Items
+    public class CommonSwords : New_Game.Items.Items
     {
         public CommonSwords(int Charlevel)
         {
@@ -16,15 +17,15 @@ namespace New_Game.Items.CommonItems.Swords
             Name = SwordNames.CommonName();
             Rarity = "Common";
             Description = DescriptionGenerator.Generator(Name);
-            ItemLevel = ItemLevelCalc.Calc(Charlevel, Rarity);
-            WeaponStrength = WeaponsStrengthCalc.Calc(ItemLevel);
+            ItemLevel = ItemLevelCalc(Charlevel, Rarity);
+            WeaponStrength = WeaponStrengthCalc(ItemLevel);
         }
 
-        }
+    }
 
 }
 
 
-    
+
 
 

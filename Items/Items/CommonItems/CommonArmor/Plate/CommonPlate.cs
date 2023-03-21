@@ -6,25 +6,26 @@ using System.Text;
 using System.Threading.Tasks;
 using New_Game.Items.CommonFiles;
 
-namespace New_Game.Items.CommonItems.Staves
+namespace Items.Items.CommonItems.CommonArmor.Plate
 {
-    public class CommonStaves : Items
+    public class CommonPlate : New_Game.Items.Items
     {
-        public CommonStaves(int Charlevel)
+        public CommonPlate(int Charlevel)
         {
-            Type = "Sword";
-            Name = "Staff";
+            Type = "Armor";
+            Name = "Plate";
             Rarity = "Common";
             Description = DescriptionGenerator.Generator(Name);
-            ItemLevel = ItemLevelCalc.Calc(Charlevel, Rarity);
-            WeaponStrength = WeaponsStrengthCalc.Calc(ItemLevel);
-        }
+            ItemLevel = ItemLevelCalc(Charlevel, Rarity);
+            Armor = WeaponStrengthCalc(ItemLevel);
 
         }
+
+    }
 
 }
 
 
-    
+
 
 

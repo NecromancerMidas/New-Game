@@ -7,12 +7,19 @@ using System;
 using System.Data;
 using System.Runtime.CompilerServices;
 using Common;
+using Items.Items.CommonFiles;
+using Items.Items.CommonItems.CommonArmor.LeatherArmor;
+using Items.Items.CommonItems.CommonArmor.Plate;
+using Items.Items.CommonItems.CommonWeapons.Daggers;
+using Items.Items.CommonItems.CommonWeapons.Staves;
+using Items.Items.CommonItems.CommonWeapons.Swords;
 using New_Game.Classes;
 using New_Game.Introduction;
 using New_Game.Items.CommonFiles;
 using New_Game.Items.CommonItems.Daggers;
 using New_Game.Items.CommonItems.Swords;
 using New_Game.Items.CommonItems.Staves;
+using System.Security.Cryptography;
 
 namespace New_Game
 {
@@ -39,9 +46,15 @@ namespace New_Game
             var Sword = new CommonSwords(Class.Level);
             var Dagger = new CommonDaggers(Class.Level);
             var Staff = new CommonStaves(Class.Level);
+            var Plate = new CommonPlate(Class.Level);
+            var Leather = new CommonLeather(Class.Level);
+            var Robe = new CommonRobes(Class.Level);
             Draw.Box(DrawWeaponStats.DrawStats(Staff));
             Draw.Box(DrawWeaponStats.DrawStats(Dagger));
             Draw.Box(DrawWeaponStats.DrawStats(Sword));
+            Draw.Box(DrawArmorStats.DrawStats(Plate));
+            Draw.Box(DrawArmorStats.DrawStats(Leather));
+            Draw.Box(DrawArmorStats.DrawStats(Robe));
             Console.WriteLine("Please give yourself a name I recommend Midas its a good name.");
             Console.WriteLine();
             Class.ClassStringChanger(Console.ReadLine(), "name");

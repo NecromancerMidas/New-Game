@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Common;
 
-namespace New_Game.Items.CommonItems.Swords
+namespace Items.Items.CommonItems.CommonWeapons.Swords
 {
     public class SwordNames
     {
@@ -14,11 +14,11 @@ namespace New_Game.Items.CommonItems.Swords
 
         public static string CommonName()
         {
-            string Name = CommonSwordNames[Randomer.Randomizer(0,CommonSwordNames.Length)];
-          return Name;
+            string Name = CommonSwordNames[Randomer.Randomizer(0, CommonSwordNames.Length)];
+            return Name;
         }
 
 
     }
-    
+
 }

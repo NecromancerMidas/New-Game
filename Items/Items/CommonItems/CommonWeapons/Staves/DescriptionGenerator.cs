@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Common;
+using Items.Items.CommonItems.CommonWeapons.Staves;
 
 namespace New_Game.Items.CommonItems.Staves
 {
@@ -20,7 +21,7 @@ namespace New_Game.Items.CommonItems.Staves
         {
             var description = CommonStaveDescription;
             
-            return description[Randomer.Randomizer(0,5)];
+            return description[Randomer.Randomizer(0,4)];
         }
 
     }
