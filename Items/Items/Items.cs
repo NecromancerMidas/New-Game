@@ -48,6 +48,34 @@ namespace New_Game.Items
             return level * Randomer.Randomizer(1, 4);
         }
 
+        public string DrawArmorStats()
+        {
+            string stats = $@"
+Name: {Name}
+Itemlevel: {ItemLevel} 
+Rarity: {Rarity} 
+Armor:  {Armor} 
+Description: '{Description}'{(Intelligence == 0 ? null : $@"Intelligence: {Intelligence}
+")}{(Strength == 0 ? null : $@"Strength: {Strength}
+")}{(Agility == 0 ? null : $@"Agility: {Agility}")}
+";
+
+            return stats;
+        }
+        public string DrawWeaponStats()
+        {
+            string stats = $@"
+Name: {Name}
+Itemlevel: {ItemLevel} 
+Rarity: {Rarity} 
+Weaponstrength:  {WeaponStrength} 
+Description: '{Description}'{(Intelligence == 0 ? null : $@"Intelligence: {Intelligence}
+")}{(Strength == 0 ? null : $@"Strength: {Strength}
+")}{(Agility == 0 ? null : $@"Agility: {Agility}")}
+";
+
+            return stats;
+        }
         public Items()
         {
 
